@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج إدارة المشتريات والمبيعات </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>إعداد الطالب: محمود محمد محمود أبو الفتوح أحمد العزيري</h1>
+        <div id="timer">
+            <span id="currentTime"></span>
+            <span id="currentDate"></span>
+        </div>
+        <!-- فاتورة الشراء -->
+        <section id="purchase-invoice">
+            <h2>فاتورة شراء</h2>
+            <form id="purchaseForm">
+                <label>اسم الصنف: <input type="text" id="purchaseItemName"></label>
+                <label>كمية الصنف: <input type="number" id="purchaseItemQuantity"></label>
+                <label>نوع الصنف: <input type="text" id="purchaseItemType"></label>
+                <label>كود الصنف: <input type="text" id="purchaseItemCode"></label>
+                <label>رقم الهاتف: <input type="tel" id="companyPhone"></label>
+                <button type="button" id="printPurchaseInvoice">طباعة فاتورة الشراء</button>
+            </form>
+        </section>
+        <!-- فاتورة البيع -->
+        <section id="sales-invoice">
+            <h2>فاتورة بيع</h2>
+            <form id="salesForm">
+                <label>اسم الصنف: <input type="text" id="salesItemName"></label>
+                <label>كمية الصنف: <input type="number" id="salesItemQuantity"></label>
+                <label>نوع الصنف: <input type="text" id="salesItemType"></label>
+                <label>كود الصنف: <input type="text" id="salesItemCode"></label>
+                <label>المتبقي من الصنف: <input type="number" id="remainingStock"></label>
+                <label>مجموع الأصناف: <input type="number" id="totalStock"></label>
+                <button type="button" id="calculateTotal">حساب المجموع</button>
+                <button type="button" id="printSalesInvoice">طباعة فاتورة البيع</button>
+            </form>
+        </section>
+        <!-- الحضور والانصراف -->
+        <section id="attendance">
+            <h2>قائمة الحضور والانصراف</h2>
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>وقت الحضور</th>
+                        <th>وقت الانصراف</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div>
+                <button type="button" id="addEmployee">إضافة موظف</button>
+                <button type="button" id="printAttendance">طباعة قائمة الحضور والانصراف</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
